@@ -97,23 +97,17 @@
         <div class="navbar-end hidden lg:flex">
           <ul class="menu menu-horizontal px-1 space-x-3">
             <li>
-              <button
-                class="text-base font-medium btn btn-outline btn-primary"
-              >
+              <button class="text-base font-medium btn btn-outline btn-primary">
                 <i class="fa-solid fa-circle-question"></i>FAQ
               </button>
             </li>
             <li>
-              <button
-                class="text-base font-medium btn btn-outline btn-primary"
-              >
+              <button class="text-base font-medium btn btn-outline btn-primary">
                 <i class="fa-solid fa-book-open"></i>Learn
               </button>
             </li>
             <li>
-              <button
-                class="text-base font-medium btn btn-outline btn-primary"
-              >
+              <button class="text-base font-medium btn btn-outline btn-primary">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
               </button>
             </li>
@@ -122,36 +116,232 @@
       </nav>
 
       <!-- ----------------Banner Section Start--------------------- -->
-      <section class="max-w-7xl m-auto flex flex-col-reverse md:flex-row justify-between items-center px-10 py-14">
+      <section
+        class="max-w-7xl m-auto flex flex-col-reverse md:flex-row justify-between items-center px-10 py-14"
+      >
         <div class="flex-1 space-y-5 text-center md:text-left">
-          <h1 class="font-bold text-4xl"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
-          <p class="bangla-font font-medium text-xl">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-          <input type="name" placeholder="Enter your name..." class="block input input-sm" />
-          <input type="password" placeholder="Enter your password..." class="input input-sm block" />
-          <button class="btn btn-primary block text-sm hover:bg-black transition-colors duration-700 ease-in-out">Get Started</button>
-
+          <h1 class="font-bold lg:text-4xl text-2xl">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h1>
+          <p class="bangla-font font-medium text-xl">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <input
+            type="name"
+            placeholder="Enter your name..."
+            class="block input input-sm"
+          />
+          <input
+            type="password"
+            placeholder="Enter your password..."
+            class="input input-sm block"
+          />
+          <button
+            class="btn btn-primary block text-sm hover:bg-black transition-colors duration-700 ease-in-out"
+          >
+            Get Started
+          </button>
         </div>
         <div class="flex-1">
-          <img src="./assets/hero-student.png" alt="This is Banner image">
+          <img src="./assets/hero-student.png" alt="This is Banner image" />
         </div>
       </section>
     </header>
     <!-- ----------------Main Section Start--------------------- -->
     <main>
       <!-- ----------------Let's Learn Vocabularies Section Start--------------------- -->
-      <section id="lets-section" class="max-w-7xl m-auto space-y-7 px-5">
-        <h1 class="text-[#18181B] text-3xl font-bold text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
-        <div id="lesson-btn" class="lesson text-center space-x-4">
-          
+      <section
+        id="lets-section"
+        class="max-w-7xl m-auto space-y-7 px-5 lg:px-10 mt-20 lg:mt-28"
+      >
+        <h1 class="text-[#18181B] text-xl lg:text-3xl font-bold text-center">
+          <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h1>
+        <div
+          id="lesson-btn"
+          class="lesson text-center flex flex-wrap gap-4 justify-center"
+        ></div>
+        <!-- ----------------Search Vocabulary Start--------------------- -->
+        <section class="flex justify-center items-center my-10 max-w-52 m-auto lg:max-w-full">
+          <label class="input">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input class="text-xs lg:text-base" id="user-input" type="search" required placeholder="Search Vocabulary Now ..." />
+          </label>
+        </section>
+        <!-- ----------------Spiner Start--------------------- -->
+        <section
+          id="loading-icon"
+          class="flex justify-center items-center hidden"
+        >
+          <span class="loading loading-spinner text-secondary"></span>
+        </section>
+        <!-- ----------------All Lessons display div Start--------------------- -->
+        <div
+          id="displayData"
+          class="text-center bg-[#f8f8f8] p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <div class="col-span-full space-y-3 lg:space-y-2 py-15 rounded-md">
+            <p
+              class="font-medium text-[8px] lg:text-sm text-[#79716B] bangla-font"
+            >
+              আপনি এখনো কোন Lesson Select করেন নি
+              <i class="text-base fa-regular fa-face-frown text-green-500"></i>
+            </p>
+            <h1
+              class="font-semibold text-xl lg:text-4xl text-[#292524] bangla-font"
+            >
+              একটি Lesson Select করুন !!
+            </h1>
+          </div>
         </div>
-        <div class="display-card">
-
-        </div>
-
       </section>
+      <!-- ----------------Frequently Asked Questions Section Start--------------------- -->
+      <section
+        class="max-w-7xl m-auto space-y-7 px-5 py-10 lg:px-10 mt-20 lg:mt-28"
+      >
+        <h1 class="text-[#18181B] text-xl lg:text-3xl font-bold text-center">
+          <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h1>
+
+        <div class="pt-3">
+          <ol class="space-y-4">
+            <li
+              tabindex="0"
+              class="bg-[#f8f8f8] collapse collapse-plus bg-base-100 border-base-300 border"
+            >
+              <div class="collapse-title font-semibold">
+                1. How can I start learning English on this website?
+              </div>
+              <div
+                class="collapse-content text-sm rounded-md pt-3 flex items-center bg-white"
+              >
+                You can start by exploring our beginner lessons, interactive
+                exercises, and quizzes. We also offer structured courses to
+                guide you step by step.
+              </div>
+            </li>
+            <li
+              tabindex="0"
+              class="bg-[#f8f8f8] collapse collapse-plus bg-base-100 border-base-300 border"
+            >
+              <div class="collapse-title font-semibold">
+                2. Is this website free to use?
+              </div>
+              <div
+                class="collapse-content text-sm rounded-md pt-3 flex items-center bg-white"
+              >
+                Yes, this website is completely free to use. You can access all
+                basic features without any cost. However, some advanced
+                resources may require a premium subscription.
+              </div>
+            </li>
+            <li
+              tabindex="0"
+              class="bg-[#f8f8f8] collapse collapse-plus bg-base-100 border-base-300 border"
+            >
+              <div class="collapse-title font-semibold">
+                3. Do I need to create an account?
+              </div>
+              <div
+                class="collapse-content text-sm rounded-md pt-3 flex items-center bg-white"
+              >
+                Creating an account is optional for browsing general
+                information. However, to save your progress, access personalized
+                features, and use advanced tools, you will need to create an
+                account.
+              </div>
+            </li>
+            <li
+              tabindex="0"
+              class="bg-[#f8f8f8] collapse collapse-plus bg-base-100 border-base-300 border"
+            >
+              <div class="collapse-title font-semibold">
+                4. How can I build my English vocabulary?
+              </div>
+              <div
+                class="collapse-content text-sm rounded-md pt-3 flex items-center bg-white"
+              >
+                You can build your English vocabulary by reading articles,
+                books, and newspapers regularly. Practice writing new words in
+                sentences, use flashcards, and engage in conversations. Our
+                website also provides vocabulary exercises and quizzes to help
+                you improve faster.
+              </div>
+            </li>
+            <li
+              tabindex="0"
+              class="bg-[#f8f8f8] collapse collapse-plus bg-base-100 border-base-300 border"
+            >
+              <div class="collapse-title font-semibold">
+                5. Do you offer certificates for completed courses?
+              </div>
+              <div
+                class="collapse-content text-sm rounded-md pt-3 flex items-center bg-white"
+              >
+                Yes, we provide certificates for certain completed courses.
+                After successfully finishing a course and passing the final
+                assessment, you can download your certificate from your
+                dashboard.
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick=" ">open modal</button> -->
+      <dialog
+        id="my_modal_5"
+        class="modal modal-bottom sm:modal-middle"
+      ></dialog>
     </main>
     <!-- ----------------Footer Section Start--------------------- -->
-    <footer></footer>
+    <footer
+      class="lg:px-10 max-w-7xl m-auto space-y-7 px-5 py-10 flex flex-col lg:flex-row justify-between lg:items-center border-t-2 border-t-[#FFEBEB] mt-20 lg:mt-28"
+    >
+      <div class="lg:flex-1 space-y-3">
+        <div class="flex items-center justify-start gap-2">
+          <span class="text-base font-semibold">English</span>
+          <span
+            ><img
+              class="w-7 flex-shrink-0"
+              src="./assets/logo.png"
+              alt="This is Website logo"
+          /></span>
+          <span class="bangla-font text-base font-medium">জানালা</span>
+        </div>
+        <h2 class="bangla-font text-base font-semibold">ইংরেজি শিখুন সহজে</h2>
+        <p class="text-sm font-normal text-[#000000]">
+          Providing ED-Tech Applications since 2025
+        </p>
+      </div>
+      <div class="lg:flex-1 flex flex-col items-start lg:items-end">
+        <div>
+          <h1 class="text-base font-semibold text-[#18181B]">Follow us</h1>
+          <div class="">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- ----------------Script Link--------------------- -->
     <script src="./js/script.js"></script>
   </body>
